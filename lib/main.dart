@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'designSystem/TruthMenuButton.dart';
-import 'designSystem/TruthTextButton.dart';
+import 'designSystem/truth_menu_button.dart';
+import 'designSystem/truth_text_button.dart';
 
 void main() {
   runApp(const MaterialApp(
