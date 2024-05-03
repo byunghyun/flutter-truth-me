@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'designSystem/TruthMenuButton.dart';
+import 'designSystem/TruthTextButton.dart';
+
 void main() {
   runApp(const MaterialApp(
       home: Scaffold(
@@ -36,139 +39,44 @@ class BodyContent extends StatelessWidget {
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.symmetric(horizontal: 30),
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.amberAccent,
-                      ),
-                      child: const Text(
-                        '성격 검사',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                        ),
-                      ),
-                      onPressed: () {
-                        // 버튼 클릭 시 실행될 동작
-                      },
-                    ),
+                    child: const TruthMenuButton(buttonText: '성격 검사'),
                   ),
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.symmetric(horizontal: 30),
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.amberAccent,
-                      ),
-                      child: const Text(
-                        '동행자',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                        ),
-                      ),
-                      onPressed: () {
-                        // 버튼 클릭 시 실행될 동작
-                      },
-                    ),
+                    child: const TruthMenuButton(buttonText: '마음 알기'),
                   ),
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.symmetric(horizontal: 30),
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.amberAccent,
-                      ),
-                      child: const Text(
-                        '마음 알기',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                        ),
-                      ),
-                      onPressed: () {
-                        // 버튼 클릭 시 실행될 동작
-                      },
-                    ),
+                    child: const TruthMenuButton(buttonText: '동행자'),
                   ),
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.symmetric(horizontal: 30),
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.amberAccent,
-                      ),
-                      child: const Text(
-                        '나의 정보',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                        ),
-                      ),
-                      onPressed: () {
-                        // 버튼 클릭 시 실행될 동작
-                      },
-                    ),
+                    child: const TruthMenuButton(buttonText: '나의 정보'),
                   ),
                 ],
               ),
             ),
           ),
-          Container(
-            color: Colors.deepOrange,
-            child: Wrap(
-              alignment: WrapAlignment.center,
-              direction: Axis.horizontal,
-              spacing: 10,
-              children: [
-                TextButton(
-                  style: TextButton.styleFrom(
-                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    foregroundColor: Colors.amberAccent,
-                  ),
-                  child: const Text(
-                    '로그인',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                    ),
-                  ),
-                  onPressed: () {
-                    // 버튼 클릭 시 실행될 동작
-                  },
-                ),
-                const Text(
-                  '|',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
+          IntrinsicHeight(
+            child: Container(
+              margin: const EdgeInsets.only(bottom: 15),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TruthTextButton(buttonText: '로그인'),
+                  VerticalDivider(
+                    width: 20,
+                    thickness: 1,
+                    indent: 8,
+                    endIndent: 8,
                     color: Colors.black,
-                    fontSize: 14,
                   ),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    foregroundColor: Colors.amberAccent,
-                  ),
-                  child: const Text(
-                    '회원 가입',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                    ),
-                  ),
-                  onPressed: () {
-                    // 버튼 클릭 시 실행될 동작
-                  },
-                ),
-              ],
+                  TruthTextButton(buttonText: '회원 가입'),
+                ],
+              ),
             ),
           ),
         ],
